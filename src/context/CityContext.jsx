@@ -1,22 +1,22 @@
-import React, { createContext, useState, useEffect } from "react";
+import { createContext, useEffect, useState } from 'react';
 
-export const CityContext = createContext(null);
+export const CityContext=createContext(null)
 
-function CityContextProvider({ children }) {
-    const [cityList, setCityList] = useState([]);
+function CitycontextProvider({children}) {
+    const [citiesList, setCitieslist]=useState([])
 
     useEffect(() => {
-        const storedCities = JSON.parse(localStorage.getItem('cities'));
-        if (storedCities) {
-            setCityList(storedCities);
+        const citiesList=JSON.parse(localStorage.getItem('cities'));
+        if (citiesList){
+            setCitieslist(citiesList);
         }
     }, []);
 
     return (
-        <CityContext.Provider value={[cityList, setCityList]}>
+        <CityContext.Provider value={[citiesList, setCitieslist]}>
             {children}
         </CityContext.Provider>
-    );
+    )
 }
 
-export default CityContextProvider;
+export default CitycontextProvider

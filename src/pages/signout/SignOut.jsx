@@ -2,13 +2,12 @@ import "./SignOut.css"
 import {useNavigate} from "react-router-dom";
 import HeaderWeather from "../../components/header/headerWeather.jsx";
 import NavBar from "../../components/navbar/NavBar.jsx";
-import Button from "../../components/button/Button.jsx";
 
-function SignOut() {
+function SignOut(){
 
     const navigate = useNavigate();
 
-    return (
+    return(
         <div>
             <HeaderWeather/>
             <NavBar/>
@@ -19,19 +18,21 @@ function SignOut() {
                         <p>Bedankt voor u bezoek en tot snel</p>
                     </span>
                     <p>Iets mis?</p>
-                    <Button
-                        className="page-button"
+                    <button
                         type="button"
-                        onClick={() => navigate('/signin')}
-                        text='Log In'
-                    />
-                    <p>Uit</p>
-                    <Button
+                        onClick={() =>  navigate('/signin')}
                         className="page-button"
+                    >
+                        Log In
+                    </button>
+                    <p>Uit</p>
+                    <button
                         type="button"
                         onClick={() => navigate("/")}
-                        text='Home'
-                    />
+                        className="page-button"
+                    >
+                        Home
+                    </button>
                 </div>
             </div>
         </div>

@@ -1,39 +1,25 @@
-import React, { createContext, useState, useEffect } from "react";
+import React, {createContext, useState, useEffect} from "react";
 
-export const PreferencesContext = createContext(null);
+export const PreferencesContext = createContext(null)
 
-const PreferencesContextProvider = ({ children }) => {
+function PreferencesContextProvider({children}) {
     const [preferencesList, setPreferencesList] = useState({
-        preferredWeather: {
-            temperature: 0,
-            cloudiness: 0,
-            windspeed: 0,
-        },
-    });
+        preferredWeather: 0
+    })
 
     useEffect(() => {
-        // Haal voorkeursgegevens op uit localStorage en werk de state bij als er gegevens beschikbaar zijn.
-        const storedPreferences = localStorage.getItem("preferences");
-        if (storedPreferences && storedPreferences !== "undefined") {
-            try {
-                const parsedPreferences = JSON.parse(storedPreferences);
-                setPreferencesList(parsedPreferences);
-            } catch (error) {
-                console.error("Error parsing preferences from localStorage", error);
-            }
+        // Het haalt voorkeursgegevens op uit localStorage en werkt de state bij als er gegevens beschikbaar zijn.
+        const preferencesList = JSON.parse(localStorage.getItem('preferences'));
+        if (preferencesList) {
+            setPreferencesList(preferencesList);
         }
-    }, []);
-
-    useEffect(() => {
-        // Sla de voorkeursgegevens op in localStorage wanneer deze worden bijgewerkt.
-        localStorage.setItem("preferences", JSON.stringify(preferencesList));
-    }, [preferencesList]);
+    }, [])
 
     return (
         <PreferencesContext.Provider value={[preferencesList, setPreferencesList]}>
             {children}
         </PreferencesContext.Provider>
-    );
-};
+    )
+}
 
-export default PreferencesContextProvider;
+export default PreferencesContextProvider

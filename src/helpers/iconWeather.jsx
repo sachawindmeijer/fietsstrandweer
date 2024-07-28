@@ -3,27 +3,27 @@ import Sunny from '../assets/icons/sun.svg';
 import Rain from '../assets/icons/rain.svg';
 import Clouds from '../assets/icons/clouds.svg';
 import Snow from '../assets/icons/snow.svg';
-import Wind from '../assets/icons/wind.svg';
+import  Wind from '../assets/icons/wind.svg';
 import Drizzle from '../assets/icons/sun-rain.svg';
 
 function iconWeather(weatherType) {
     switch (weatherType) {
         case 'Clear':
-            return <img src={Sunny} alt="Sunny icon" />;
+            return <Sunny/>;
         case 'Clouds':
-            return <img src={Clouds} alt="Clouds icon" />;
+            return <Clouds/>;
         case 'Drizzle':
-            return <img src={Drizzle} alt="Drizzle icon" />;
+            return <Drizzle/>;
         case 'Rain':
-            return <img src={Rain} alt="Rain icon" />;
+            return <Rain/>;
         case 'Snow':
-            return <img src={Snow} alt="Snow icon" />;
+            return <Snow/>;
         case 'Mist':
         case 'Haze':
         case 'Smoke':
         case 'Fog':
         default:
-             return <img src={Wind} alt="Wind icon" />;//wind
+            return <Wind/>;
     }
 }
 

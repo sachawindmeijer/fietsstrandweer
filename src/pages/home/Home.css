@@ -5,7 +5,8 @@
 .outer-container {
     display: flex;
     justify-content: center;
-    align-items: stretch;
+    flex-direction: row;
+
     flex-wrap: wrap;
 }
 
@@ -14,24 +15,17 @@
     flex-wrap: wrap;
     padding: 0;
     margin: 0;
-    justify-content: space-between;
-    flex: 1;
+    justify-content: center;
+    /*border: solid 2px darkred;*/
 }
 
 .saved-cities-list-container, .saved-cities-logout-container {
-    width: 50%;
-    background: #2a5fff;
-    color: white;
-}
-
-.saved-cities-list-container, .saved-cities-logout-container, .image-and-search-container {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     min-width: 400px;
     padding: 5px;
+    background: #2a5fff;
     border-radius: 5px;
+    margin-right: 20px;
+    /*border: solid 2px black;*/
 }
 
 .saved-cities-logout-message, .weather-error {
@@ -40,54 +34,37 @@
     width: 50%;
     padding: 5px;
     min-width: 290px;
+
     justify-content: space-between;
 }
 
-.image-container img {
-    width: 100%;
-    height: auto;
-}
-
-.search-city {
-    display: flex;
-    max-width: 500px;
-    object-fit: contain;
-    justify-content: center;
-    padding-bottom: 20px;
-    flex-direction: column;
-}
-
 .image-and-search-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    /*padding: 5px;*/
+    /*background: #2a5fff;*/
+    border-radius: 5px;
+    /*margin: 5px;*/
+    /*border: solid 2px black;*/
+
 }
 
 .image-container {
     display: flex;
+    max-width: 500px;
+    object-fit: contain; /* Behoud de beeldverhouding van de afbeelding */
     justify-content: center;
-    margin-bottom: 10px;
+    padding-bottom: 20px;
+    /*border: solid 2px black;*/
 }
 
-.weather-search-container {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.image-container img {
+    max-width: 100%;
+    object-fit: contain;
+    border-radius: 5px 5px 0 0;
+
 }
 
-.locationdetails {
-    padding: 10px;
-    margin-top: 10px;
-    width: 100%;
-    box-sizing: border-box;
-    border-radius: 5px;
-}
-
-.locationdetails p {
-    color: #2a5fff;
-    margin: 5px 0;
-    text-align: left;
+p {
+    color: white;
 
 }
 

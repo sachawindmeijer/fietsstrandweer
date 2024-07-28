@@ -1,110 +1,120 @@
 @import url('https://fonts.googleapis.com/css2?family=Jockey+One&display=swap');
+/*In dit voorbeeld staat alle CSS in één bestand, dit wil je eigenlijk nooit.
+Om de het begrijpen van de bestaande code zo eenvoudig mogelijk te maken,
+is het voor deze opdracht wel gedaan!*/
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body, html {
-    height: 100%;
-}
-
-body {
-    font-family: "Jockey One", sans-serif;
-    display: flex;
-    flex-direction: column;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 
 }
+body{
+  font-family: "Jockey One", sans-serif;
 
+}
 p {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 h1 {
-    font-size: 50px;
+  font-size: 50px;
 }
 
 h2 {
-    font-size: 30px;
+  font-size: 30px;
 }
 
 h3 {
-    font-size: 25px;
+  font-size: 25px;
 }
 
 h4 {
-    font-size: 20px;
-    color: #ffffff
+  font-size: 20px;
+  color: #ffffff
 
 }
 
 input {
-    font-size: 16px;
+  font-size: 16px;
 }
 
+/*.form-container {*/
+/*    display: flex;*/
+/*    max-width: 70%;*/
+/*    flex-direction: column;*/
+/*    align-items: center;*/
+/*    background: #ffffff;*/
+/*    margin: 10px;*/
+/*    padding: 40px;*/
+/*    border-radius: 15px;*/
+/*    text-align: center;*/
+/*}*/
 
-.app {
-    text-align: center;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-.content {
-    flex: 1;
-}
 
+
+/*Algemene button styling*/
+/*button {*/
+/*  border-radius: 4px;*/
+/*  border: none;*/
+/*  !*color: white;*!*/
+/*  padding: 8px 16px;*/
+/*  background-color: #f5ab00;*/
+/*  color: white;*/
+/*  font-weight: bold;*/
+/*}*/
+
+/*Zorgt ervoor dat als twee buttons naast elkaar staan, er altijd ruimte tussen blijft*/
 button {
-
-    text-align: center;
-    margin-left: 300px;
-    background-color: transparent;
-    padding: 10px 20px;
-    border: none;
-    color: #ffffff;
-    font-size: 20px;
-    font-weight: bold;
+  margin-left: 160px;
+  background-color: transparent;
+  padding: 2px 20px 24px 48px;
+  border: none;
+  color: #ffffff;
+  font-size:18px;
+  justify-content: space-between;
+  font-weight: bold;
 
 }
 
 button:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 button:disabled {
-    background-color: #ff4500;
+  background-color: #ff4500;
 }
 
 a,
 a:visited,
 a:active {
-    color: #0d3b66;
+  color: #0d3b66;
 }
 
 a:hover {
-    color: #ea7e1f;
+  color: #ea7e1f;
 }
 
 /*Algemene formulier-styling*/
 form {
-    display: flex;
-    flex-direction: column;
-    background-color: #2a5fff;
-    padding: 32px;
-    max-width: 300px;
-    border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  background-color: #2a5fff;
+  padding: 32px;
+  max-width: 300px;
+  border-radius: 4px;
     color: white;
 }
 
 form label {
-    margin: 4px 0;
-    font-weight: bold;
+  margin: 4px 0;
+  font-weight: bold;
 }
 
 form input {
-    width: 100%;
-    padding: 4px 8px;
-    margin: 6px 0;
+  width: 100%;
+  padding: 4px 8px;
+  margin: 6px 0;
 }
 
 /*h2 {*/
@@ -112,45 +122,60 @@ form input {
 /*}*/
 
 .content {
-    margin: 32px;
+  margin: 32px;
 }
 
 .form-button {
-    width: 100%;
+  width: 100%;
 }
 
 nav {
-    /*background-color: orangered;*/
-    /*color: white;*/
-    display: flex;
-    padding: 0 32px;
-    align-items: center;
-    justify-content: space-between;
+  /*background-color: orangered;*/
+  /*color: white;*/
+  display: flex;
+  padding: 0 32px;
+  align-items: center;
+  justify-content: space-between;
 }
 
 nav a,
 nav a:visited,
 nav a:active {
-    color: #ffffff;
+  color: #2a5fff;
 }
 
+/*.logo-container {*/
+/*  display: flex;*/
+/*  align-items: center;*/
+/*  justify-content: space-between;*/
+/*  width: 150px;*/
+/*}*/
+
+/*.logo-container img {*/
+/*  width: 40px;*/
+/*  margin-right: 8px;*/
+/*}*/
+
+/*section  {*/
+/*  margin: 0 0 10px 0;*/
+/*}*/
 
 .error {
-    color: rgba(234, 126, 31, 0.8);
+  color: #ea7e1f;
 }
 
 /*Zet mij op een element en ik blijf voor altijd draaien!*/
 .loading-icon {
-    width: 16px;
-    height: 16px;
-    animation: rotating 1.5s linear infinite;
+  width: 16px;
+  height: 16px;
+  animation: rotating 1.5s linear infinite;
 }
 
 @keyframes rotating {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

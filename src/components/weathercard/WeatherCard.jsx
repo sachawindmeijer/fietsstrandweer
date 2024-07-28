@@ -1,4 +1,4 @@
-// import React from "react";
+import React from "react";
 import kelvinToCelcius from "../../helpers/kelvinToCelsius";
 import iconWeather from "../../helpers/iconWeather.jsx";
 import windDirection from "../../helpers/windDirection";

@@ -1,7 +1,6 @@
 import React, {useState, useEffect, useContext} from "react";
 import {CityContext} from "../../context/CityContext";
 import "./SaveCities.css"
-import Button from "../button/Button.jsx";
 
 // Deze code zorgt voor het opslaan en beheren van steden in een React applicatie.
 //     Gebruikers kunnen steden toevoegen en verwijderen uit een lijst met maximaal 5 items.
@@ -21,7 +20,6 @@ function SaveCities() {
                 id: uniqueId,
                 location: city,
             };
-            console.log("Adding new city:", newCity)
             setCitiesList([newCity, ...citiesList]);
             setCity('')
         } else {
@@ -31,13 +29,11 @@ function SaveCities() {
     }
     const deleteCity = (id) => {
         let newCityList = citiesList.filter((city) => city.id !== id);
-        console.log("Removing city:", id); // Log removed city ID
         setCitiesList([...newCityList])
     }
 
     useEffect(() => {
         localStorage.setItem('cities', JSON.stringify(citiesList));
-        console.log("Cities saved to local storage"); // Log local storage update
     }, [citiesList])
 
     return (
@@ -52,31 +48,29 @@ function SaveCities() {
                     onChange={(e) => setCity(e.target.value)}
                     placeholder="Voer hier de stad in"
                 />
-                <Button
-                    type="submit"
-                    disabled={citiesList.length === 3}
-                    text='Voeg stad toe'
-                />
+                <button type="submit"  disabled={citiesList.length === 3}>
+                    Voeg stad toe
+                </button>
             </form>
 
-            <section className="saved-cites-container">
-                {citiesList.map((city) => {
-                    const {id, location} = city;
-                    return (
-                        <article key={id} className="city-card">
-                            <p className="stadnaam">{location}</p>
-                            <button
-                                type="button"
-                                onClick={() => deleteCity(id)}
-                                className="button"
-                            >Verwijder de stad
-                            </button>
-                        </article>
-                    )
-                })}
-            </section>
-        </section>
-    )
+    <section className="saved-cites-container">
+        {citiesList.map((city) => {
+            const {id, location} = city;
+            return (
+                <article key={id} className="city-card">
+                    <p className="stadnaam">{location}</p>
+                    <button
+                        type="button"
+                        onClick={() => deleteCity(id)}
+                        className="button"
+                    >Verwijder de stad
+                    </button>
+                </article>
+            )
+        })}
+    </section>
+    </section>
+)
 }
 
 export default SaveCities

@@ -1,19 +1,30 @@
+
 .outer-container {
     padding: 15px 20px 10px 20px;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     min-height: 500px;
+    border: solid 2px green;
+}
+
+.text-city-pref-container{
+    display: flex;
+    flex-direction: column;
+    min-width: 300px;
+    border: solid 2px yellow;
 }
 
 .city-and-preferences-container {
     display: flex;
     flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
     justify-content: center;
+    border: solid 2px darkred;
 }
 
-.saved-cities-container,
-.preferences-container {
+.saved-cities-container {
     min-width: 400px;
     padding: 5px;
     background: #2a5fff;
@@ -21,27 +32,16 @@
     margin: 8px;
 }
 
-.preferences-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center; /* Center children horizontally */
-}
-
-.save-button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
+.preferences-container {
+    padding: 5px;
+    background: #2a5fff;
     border-radius: 5px;
-    cursor: pointer;
-    text-align: center;
+    margin: 8px;
+    border: solid 2px black;
 }
 
-.save-button:hover {
-    background-color: #45a049;
-}
 
-.save-button:disabled {
-    background-color: #aaa;
+
+.preferences-input-wrapper {
+    margin: 10px 0 10px 0;
 }
