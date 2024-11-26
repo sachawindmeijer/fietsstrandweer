@@ -1,0 +1,25 @@
+
+
+
+footer {
+    background-color: transparent;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    text-align: center;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    font-size: 14px;
+
+
+}
+
+footer p {
+margin: 0;
+    color: #6c757d;
+}
+
+

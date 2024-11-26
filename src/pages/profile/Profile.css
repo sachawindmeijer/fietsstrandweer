@@ -1,0 +1,98 @@
+.outer-container {
+    padding: 15px 20px 10px 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    /*min-height: 500px;*/
+
+}
+
+.city-and-preferences-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.saved-cities-container,
+.preferences-container {
+    min-width: 400px;
+    padding: 5px;
+    background: #2a5fff;
+    border-radius: 5px;
+    margin: 8px;
+}
+
+.preferences-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.save-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.save-button:hover {
+    background-color: #45a049;
+}
+
+.save-button:disabled {
+    background-color: #aaa;
+}
+
+.city-and-preferences-container .outer-container .saved-cities-container {
+    border: orange;
+}
+
+.preferences-container .preferences-content {
+    border: orangered;
+}
+.background {
+    position: relative;
+
+}
+main {
+    flex: 1;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.preferences-content .preferences-container .outer-container {
+    border: blueviolet;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+.button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.preferences-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.preferences-button:hover {
+    background-color: #0056b3;
+}

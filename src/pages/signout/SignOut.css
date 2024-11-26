@@ -1,0 +1,23 @@
+.outer-container {
+    padding: 15px 20px 10px 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.button-text-container {
+    display: flex;
+    max-width: 70%;
+    flex-direction: column;
+    align-items: center;
+    background: darkgreen;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+
+.page-button {
+    margin: 10px;
+    padding: 5px;
+}

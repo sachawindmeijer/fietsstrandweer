@@ -1,0 +1,37 @@
+.outer-container {
+    display: flex;
+    justify-content: center;
+
+}
+
+.form-container {
+    display: flex;
+    max-width: 100%;
+    flex-direction: column;
+    align-items: center;
+    background: #2a5fff;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    color: white;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*text-align: center;*/
+    margin: 2px;
+}
+
+.input-container {
+    margin-bottom:30px;
+    padding: 1px;
+    text-align: left;
+}
+
+.form-button {
+    margin: 2px;
+    align-items: center;
+}

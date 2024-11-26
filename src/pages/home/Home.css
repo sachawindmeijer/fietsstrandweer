@@ -1,0 +1,113 @@
+.icon-wrapper {
+    width: 25px;
+}
+
+.outer-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+}
+
+.inner-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+    justify-content: space-between;
+    flex: 1;
+}
+
+.saved-cities-list-container, .saved-cities-logout-container {
+    width: 50%;
+    background: #2a5fff;
+    color: white;
+}
+
+.saved-cities-list-container, .saved-cities-logout-container, .image-and-search-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 400px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.saved-cities-logout-message, .weather-error {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding: 5px;
+    min-width: 290px;
+    justify-content: space-between;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+}
+
+.search-city {
+    display: flex;
+    max-width: 500px;
+    object-fit: contain;
+    justify-content: center;
+    padding-bottom: 20px;
+    flex-direction: column;
+}
+
+.image-and-search-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.weather-search-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.locationdetails {
+    padding: 10px;
+    margin-top: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.locationdetails p {
+    color: #2a5fff;
+    margin: 5px 0;
+    text-align: left;
+
+}
+
+.edit-button {
+    background-color: #4CAF50; /* Green background */
+    color: white;             /* White text */
+    padding: 10px 15px;       /* Padding */
+    margin-top: 10px;         /* Space above button */
+    border: none;             /* Remove border */
+    border-radius: 5px;       /* Rounded corners */
+    cursor: pointer;          /* Pointer cursor on hover */
+    font-size: 14px;          /* Font size */
+}
+
+
+@media (max-width: 768px) {
+    .outer-container {
+        flex-direction: column;
+        .image-container {
+            max-height: 150px;
+        }
+    }
+}
