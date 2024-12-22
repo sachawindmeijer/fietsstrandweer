@@ -6,9 +6,11 @@ import WeatherCard from "../weatherCard/WeatherCard";
 import Button from "../button/Button.jsx";
 import {Link, useNavigate} from 'react-router-dom';
 
+
 function SavedCitiesList() {
     const [cityList] = useContext(CityContext);
     const [preferencesList] = useContext(PreferencesContext);
+
     const [cityListWeatherData, setCityListWeatherData] = useState([]);
     const [error, setError] = useState(null);
     const navigate = useNavigate();
