@@ -3,7 +3,11 @@
   <component name="ProjectModuleManager">
     <modules>
 <<<<<<< HEAD
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/.idea/fietsweerapp.iml" filepath="$PROJECT_DIR$/.idea/fietsweerapp.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/.idea/strandweerapp.iml" filepath="$PROJECT_DIR$/.idea/strandweerapp.iml" />
+>>>>>>> 8edc6afe64f1c88d0459d98900e58d3e37981f33
 =======
       <module fileurl="file://$PROJECT_DIR$/.idea/strandweerapp.iml" filepath="$PROJECT_DIR$/.idea/strandweerapp.iml" />
 >>>>>>> 8edc6afe64f1c88d0459d98900e58d3e37981f33
