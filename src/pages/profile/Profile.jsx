@@ -2,7 +2,7 @@ import React from "react";
 import './Profile.css'
 import HeaderWeather from "../../components/header/headerWeather.jsx";
 import NavBar from "../../components/navbar/NavBar.jsx";
-import SaveCities from "../../components/savecities/SaveCities.jsx";
+import SaveLocation from "../../components/savecities/SaveLocation.jsx";
 import Preferences from "../../components/preferences/Preferences.jsx";
 import Footer from "../../components/footer/Footer.jsx";
 
@@ -18,7 +18,7 @@ function Profile() {
 
                         <div className="city-and-preferences-container">
                             <section className="saved-cities-container">
-                                <SaveCities/>
+                                <SaveLocation/>
                             </section>
                             <section className="preferences-container">
                                 <Preferences/>

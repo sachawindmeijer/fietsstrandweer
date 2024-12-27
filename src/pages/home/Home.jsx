@@ -6,7 +6,7 @@ import kelvinToCelcius from "../../helpers/kelvinToCelsius";
 import iconWeather from "../../helpers/iconWeather.jsx";
 import windDirection from "../../helpers/windDirection";
 import windSpeed from "../../helpers/windSpeed";
-import SavedCitiesList from "../../components/savedCitiesList/SavedCitiesList";
+import SavedLocationList from "../../components/savedcitieslist/SavedLocationList.jsx";
 import HeaderWeather from "../../components/header/headerWeather.jsx";
 import NavBar from "../../components/navBar/NavBar";
 import Search from "../../components/search/Search.jsx";
@@ -14,6 +14,7 @@ import kaart from "../../assets/nlkaart.png"
 import Footer from "../../components/footer/Footer.jsx";
 import {Link, useNavigate} from 'react-router-dom';
 import Button from "../../components/button/Button.jsx";
+import {fetchWeather} from "../../helpers/weather.jsx";
 
 
 function Home() {
@@ -25,24 +26,22 @@ function Home() {
 
 
     useEffect(() => {
-        async function fetchData() {
-            setError(false);
-            toggleLoading(true);
+        async function getWeather() {
             try {
-                const result = await axios.get(`https://api.openweathermap.org/data/2.5/weather?q=${location},nl&appid=${import.meta.env.VITE_WEER_API_KEY}&lang=nl`);
-
-                setWeatherData(result.data);
-                console.log("home", result.data)
-            } catch (e) {
-                console.error(e);
+                setError(false);
+                toggleLoading(true);
+                const data = await fetchWeather(location);
+                setWeatherData(data);
+            } catch (error) {
+                console.error(error);
                 setError(true);
-
+            } finally {
+                toggleLoading(false);
             }
-            toggleLoading(false);
         }
 
         if (location) {
-            void fetchData();
+            getWeather();
         }
     }, [location]);
 
@@ -57,7 +56,7 @@ function Home() {
                         <div className="inner-container">
                             {isAuth ?
                                 <section className="saved-cities-list-container">
-                                    <SavedCitiesList/>
+                                    <SavedLocationList/>
 
                                 </section>
                                 :

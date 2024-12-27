@@ -7,7 +7,7 @@ import humidityIcon from "../../assets/icons/humidity.png"
 import cloudIcon from "../../assets/icons/clouds blue.png"
 import "./WeatherCard.css"
 
-function WeatherCard({
+function WeatherOverview({
                          name,
                          tempK,
                          score,
@@ -20,11 +20,11 @@ function WeatherCard({
                          id,
                      }) {
     return (
-        <article className="weather-card" key={id}>
-<div className="weather-name-score">
-    <h4>{name}</h4>
-    <p>Score: {score}</p>
-</div>
+        <article className="weather-overview" key={id}>
+            <div className="weather-name-score">
+                <h4>{name}</h4>
+                <p>Score: {score}</p>
+            </div>
             <div className="weather-description">
                 <p>{kelvinToCelcius(tempK)}</p>
                 <div className="icon-wrapper">
@@ -36,12 +36,12 @@ function WeatherCard({
                 <p><span className="flex"><img src={windSockIcon} alt="Windsok" width="20"/>
                 :{windSpeed(weatherWindSpeed)}, {windDirection(windDegree)}</span></p>
                 <p><span className="flex"><img src={humidityIcon} alt="Luchtvochtigheid" width="20"/>
-                :{humidity}%</span> </p>
-                <p><span className="flex"><img src={cloudIcon} alt="bewolkt" width="20" />
-                :{clouds}%</span> </p>
+                :{humidity}%</span></p>
+                <p><span className="flex"><img src={cloudIcon} alt="bewolkt" width="20"/>
+                :{clouds}%</span></p>
             </div>
         </article>
     )
 }
 
-export default WeatherCard
+export default WeatherOverview
